@@ -22,55 +22,71 @@ One of the key parts of the project is WebSocket integration, which allows the f
 
 ## Project Structure
 
-```text
-project/
+chatgpt-clone/
 │
-├── FE/              # React + TypeScript frontend
+├── BE/
+│   ├── src/
+│   │   ├── routes/
+│   │   ├── helpers/
+│   │   ├── utils/
+│   │   ├── main.py
+│   │   └── settings.py
+│   │
+│   ├── .env
+│   ├── Dockerfile
+│   └── requirements.txt
 │
-├── BE/              # Python + FastAPI backend
+├── FE/
+│   ├── src/
+│   │   └── app/
+│   │       ├── chat/
+│   │       ├── globals.css
+│   │       ├── layout.tsx
+│   │       └── page.tsx
+│   │
+│   ├── Dockerfile
+│   ├── package.json
+│   └── next.config.ts
 │
+├── docker-compose.yaml
+├── .gitignore
 └── README.md
-```
 
 ## Running the Project Locally
 
 ### Backend Setup
 
-```bash
+
 cd BE
 python -m venv venv
-```
 
 Activate the virtual environment:
 
-```bash
+
 # Windows
 venv\Scripts\activate
-```
+
 
 Install dependencies:
 
-```bash
+
 pip install -r requirements.txt
-```
 
 Start the backend:
 
-```bash
+
 uvicorn src.main:app --reload
-```
 
 ### Frontend Setup
 
 Open another terminal:
 
-```bash
+
 cd FE
 npm install
 npm run dev
-```
 
-The frontend will be available at `http://localhost:3000`.
+
 
 ## What I Learned
 
